@@ -11,7 +11,7 @@ team_members:
   - Rishiraj Patidar
 
 links:
-  github_repo: TODO
+  github_repo: "https://github.com/Rishirajptidar/redrob-ranker"
   sandbox_link: TODO
 
 reproduce_command: "python src/rank.py --candidates data/candidates.jsonl.gz --out outputs/submission.csv"
