@@ -2,10 +2,12 @@ project_name: RecruiterRank-Hybrid
 system_name: RecruiterRank-Hybrid
 team_name: RecruiterRank-Hybrid
 submission_type: solo
+participant_id: rishirajpatidar02_1395
 
 primary_contact:
   name: Rishiraj Patidar
   email: rishirajpatidar02@gmail.com
+  phone: "+91-7987038420" 
 
 team_members:
   - Rishiraj Patidar
@@ -16,6 +18,8 @@ links:
 
 reproduce_command: "python src/rank.py --candidates data/candidates.jsonl.gz --out outputs/submission.csv"
 output_file: outputs/submission.csv
+final_submission_file: outputs/rishirajpatidar02_1395.csv
+final_submission_note: outputs/submission.csv can be copied or renamed to outputs/rishirajpatidar02_1395.csv for portal upload.
 
 runtime:
   local_runtime: About 2.5 minutes locally after optimization while processing all 100,000 candidates.

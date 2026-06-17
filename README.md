@@ -42,6 +42,17 @@ Expected output:
 - `outputs/submission.csv`
 - columns: `candidate_id`, `rank`, `score`, `reasoning`
 
+For final portal upload, copy or rename the generated file to the participant
+submission filename:
+
+```powershell
+Copy-Item outputs/submission.csv outputs/rishirajpatidar02_1395.csv
+```
+
+Final upload file:
+
+- `outputs/rishirajpatidar02_1395.csv`
+
 ## Architecture
 
 1. **Data loading**
@@ -125,21 +136,21 @@ within the 5-minute challenge limit after optimization.
 
 ```text
 redrob-ranker/
-├── data/
-├── outputs/
-├── src/
-│   ├── data_loader.py
-│   ├── preprocessing.py
-│   ├── features.py
-│   ├── risk_checks.py
-│   ├── scoring.py
-│   ├── reasoning.py
-│   ├── rank.py
-│   └── validation_utils.py
-├── validate_submission.py
-├── requirements.txt
-├── submission_metadata.yaml
-└── README.md
+|-- data/
+|-- outputs/
+|-- src/
+|   |-- data_loader.py
+|   |-- preprocessing.py
+|   |-- features.py
+|   |-- risk_checks.py
+|   |-- scoring.py
+|   |-- reasoning.py
+|   |-- rank.py
+|   `-- validation_utils.py
+|-- validate_submission.py
+|-- requirements.txt
+|-- submission_metadata.yaml
+`-- README.md
 ```
 
 ## AI Tools Disclosure
