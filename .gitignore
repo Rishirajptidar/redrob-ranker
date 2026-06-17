@@ -4,5 +4,6 @@ __pycache__/
 data/candidates.jsonl
 data/candidates.jsonl.gz
 outputs/*.csv
+outputs/
 .env
 .ipynb_checkpoints/
