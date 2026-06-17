@@ -1,0 +1,44 @@
+project_name: RecruiterRank-Hybrid
+system_name: RecruiterRank-Hybrid
+team_name: RecruiterRank-Hybrid
+submission_type: solo
+
+primary_contact:
+  name: Rishiraj Patidar
+  email: rishirajpatidar02@gmail.com
+
+team_members:
+  - Rishiraj Patidar
+
+links:
+  github_repo: TODO
+  sandbox_link: TODO
+
+reproduce_command: "python src/rank.py --candidates data/candidates.jsonl.gz --out outputs/submission.csv"
+output_file: outputs/submission.csv
+
+runtime:
+  local_runtime: About 2.5 minutes locally after optimization while processing all 100,000 candidates.
+  compute:
+    cpu_only: true
+    gpu_used: false
+    network_during_ranking: false
+    memory_strategy: Memory bounded using streaming candidate processing and heap-based top-k retention.
+
+ai_tools_used:
+  - ChatGPT
+  - GitHub Copilot/Codex
+
+ai_usage_summary: Used for architecture planning, prompt assistance, code review, debugging, optimization guidance, and documentation help.
+
+declarations:
+  hosted_llm_apis_called_by_final_pipeline: false
+  final_pipeline_works_offline: true
+  langchain_or_langgraph_used: false
+  gpu_used: false
+  full_dataset_processed: true
+  streaming_candidate_processing: true
+  honeypot_check_done: true
+  honeypot_check_note: "Implemented heuristic risk checks for honeypot-like profiles, keyword stuffing, inconsistent dates/salary, weak career evidence, and suspicious availability signals. Official hidden honeypot labels were not available."
+
+methodology_summary: RecruiterRank-Hybrid streams each candidate record, preprocesses profile/career/skills/education/Redrob signals, extracts evidence-based features, scores technical fit, career evidence, experience fit, product/company fit, behavioral availability, location fit, and GitHub activity, applies risk penalties for suspicious profiles and keyword stuffing, then keeps top candidates using heapq and writes the final top 100 with grounded reasoning.

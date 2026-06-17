@@ -1,0 +1,3 @@
+# Placeholder scoring weights for future feature development.
+keyword_hits: 10.0
+text_length_cap: 5.0
